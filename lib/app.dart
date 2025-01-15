@@ -6,6 +6,7 @@ import 'package:social_platform/features/auth/data/firebase_auth_repo.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_states.dart';
 import 'package:social_platform/features/auth/presentation/pages/auth_page.dart';
+import 'package:social_platform/features/post/presentation/pages/home_page.dart';
 import 'package:social_platform/themes/dark_mode.dart';
 
 /*ROOT LEVEL OF OUR APP
@@ -40,25 +41,34 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: darkMode,
         home: BlocConsumer<AuthCubit, AuthState>(
-            builder: (context, authState) {
-              //unauthenticated -> login/register page (Auth Page)
-              if (authState is Unauthenticated) {
-                return const AuthPage();
-              }
-              //authenticated -> home page
-              else if (authState is Authenticated) {
-                return const HomePage();
-              }
-              //loading...
-              else {
-                return Scaffold(
-                  body: Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                );
-              }
-            },
-            listener: listener),
+          builder: (context, authState) {
+            print(authState);
+
+            //unauthenticated -> login/register page (Auth Page)
+            if (authState is Unauthenticated) {
+              return const AuthPage();
+            }
+            //authenticated -> home page
+            else if (authState is Authenticated) {
+              return const HomePage();
+            }
+            //loading...
+            else {
+              return Scaffold(
+                body: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            }
+          },
+          //listen for errors...
+          listener: (context, state) {
+            if (state is AuthError) {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(state.message)));
+            }
+          },
+        ),
       ),
     );
   }

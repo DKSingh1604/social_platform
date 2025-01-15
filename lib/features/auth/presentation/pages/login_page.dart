@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_login/flutter_login.dart';
 import 'package:social_platform/features/auth/presentation/components/my_button.dart';
 import 'package:social_platform/features/auth/presentation/components/my_textfield.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_cubit.dart';
@@ -59,12 +60,6 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: FlutterLogin(
-      //   onLogin: (p0) {},
-      //   onSignup: (p0) {},
-      //   onRecoverPassword: (p0) {},
-      // ),
-
       body: SafeArea(
         child: Center(
           child: Column(
@@ -108,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: MyButton(
-                  onTap: () {},
+                  onTap: login,
                   text: "LOGIN",
                 ),
               ),
