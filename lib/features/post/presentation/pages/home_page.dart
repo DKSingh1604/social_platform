@@ -25,10 +25,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Center(
-        //user's name
-        child: Text("Welcome ${context.read<AuthCubit>().currentUser!.uid}"),
-      ),
+      drawer: const Drawer(),
     );
   }
 }
