@@ -6,7 +6,7 @@ import 'package:social_platform/features/auth/data/firebase_auth_repo.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_states.dart';
 import 'package:social_platform/features/auth/presentation/pages/auth_page.dart';
-import 'package:social_platform/features/post/presentation/pages/home_page.dart';
+import 'package:social_platform/features/home/presentation/pages/home_page.dart';
 import 'package:social_platform/themes/dark_mode.dart';
 
 /*ROOT LEVEL OF OUR APP

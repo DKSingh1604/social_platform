@@ -4,7 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_login/flutter_login.dart';
 import 'package:social_platform/features/auth/presentation/components/my_button.dart';
 import 'package:social_platform/features/auth/presentation/components/my_textfield.dart';
 import 'package:social_platform/features/auth/presentation/cubits/auth_cubit.dart';
