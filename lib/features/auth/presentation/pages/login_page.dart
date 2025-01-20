@@ -85,6 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                 controller: emailController,
                 label: "Email",
                 obscureText: false,
+                hintText: "",
               ),
 
               SizedBox(height: 15),
@@ -94,6 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                 controller: pwController,
                 label: "Password",
                 obscureText: true,
+                hintText: "",
               ),
 
               SizedBox(height: 20),

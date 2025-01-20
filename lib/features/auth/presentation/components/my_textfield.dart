@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class MyTextfield extends StatelessWidget {
   final TextEditingController controller;
   final String label;
+  final String hintText;
   final bool obscureText;
 
   const MyTextfield({
@@ -10,6 +11,7 @@ class MyTextfield extends StatelessWidget {
     required this.controller,
     required this.label,
     required this.obscureText,
+    required this.hintText,
   });
 
   @override
@@ -20,6 +22,10 @@ class MyTextfield extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
+          hintText: hintText,
+          hintStyle: const TextStyle(
+            color: Colors.grey,
+          ),
           labelText: label,
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(

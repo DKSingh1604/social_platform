@@ -104,6 +104,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: nameController,
                   label: "Name",
                   obscureText: false,
+                  hintText: "",
                 ),
 
                 SizedBox(height: 5),
@@ -113,6 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: emailController,
                   label: "Email",
                   obscureText: false,
+                  hintText: "",
                 ),
 
                 SizedBox(height: 5),
@@ -122,6 +124,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: pwController,
                   label: "Password",
                   obscureText: true,
+                  hintText: "",
                 ),
 
                 SizedBox(height: 5),
@@ -131,6 +134,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: confirmPwController,
                   label: "Confirm Password",
                   obscureText: true,
+                  hintText: "",
                 ),
 
                 SizedBox(height: 20),
